@@ -2,3 +2,4 @@ name: About StyleShare
 markdown: redcarpet
 pygments: true
 env: prod
+url: http://about.stylesha.re
