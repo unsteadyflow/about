@@ -9,7 +9,7 @@
 
   var map;
   var TILE_SIZE = 256;
-  var styleshareHQ = new google.maps.LatLng(37.52442, 127.029864);
+  var styleshareHQ = new google.maps.LatLng(37.523952, 127.0495728);
 
   function bound(value, opt_min, opt_max) {
     if (opt_min != null) value = Math.max(value, opt_min);
@@ -73,8 +73,8 @@
 
     return [
       'StyleShare',
-      '주소: 서울 특별시 강남구 압구정로 32길 49 2층',
-      '(구: 서울특별시 강남구 신사동 601번지 2층)'
+      '주소: 서울특별시 강남구 도산대로 90길 3 3층',
+      '(구: 서울특별시 강남구 청담동 50-13번지 3층)'
     ].join('<br>');
   }
 
