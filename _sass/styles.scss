@@ -6,31 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  padding-top: 60px;
-  font-family: "PT sans", "Apple SD Gothic Neo", "Nanum Gothic", "NanumGothic", "Nanum Gothic Regular", "NanumGothicRegular", sans-serif;
-  font-size: 14px;
-  color: #333;
-  line-height: 1.56;
-  letter-spacing: -0.6px;
-}
-
-a {
-  outline: none;
-
-  &:link,
-  &:focus,
-  &:hover {
-    outline: none;
-  }
-
-  &:link,
-  &:hover {
-    text-decoration: none;
-    color: #047acc;
-  }
-}
-
 .align-center {
   margin: 0 auto;
   float: none;
@@ -317,21 +292,21 @@ a {
 .ss-font-gray { color: #999999; }
 
 .ss-title {
-  &:extend(.ss-font-xl);
+  @extend .ss-font-xl;
 }
 
 .ss-header {
-  &:extend(.ss-font-lg);
-  &:extend(.ss-font-black);
+  @extend .ss-font-lg;
+  @extend .ss-font-black;
 }
 
 .ss-emphasis {
-  &:extend(.ss-font-md);
-  &:extend(.ss-font-black);
+  @extend .ss-font-md;
+  @extend .ss-font-black;
 }
 
 .ss-note {
-  &:extend(.ss-font-gray);
+  @extend .ss-font-gray;
 }
 
 .ss-clear { clear: both; }
@@ -367,8 +342,14 @@ a {
 
 .ss-press-link {
   margin-bottom: 50px;
-  a:extend(.ss-emphasis) { color: #333; }
-  span:extend(.ss-emphasis) { color: #333; }
+  a {
+    @extend .ss-emphasis;
+    color: #333;
+  }
+  span {
+    @extend .ss-emphasis;
+    color: #333;
+  }
   p { margin-bottom: 0; }
 }
 
@@ -376,27 +357,22 @@ a {
 
 .ss-subpage-title { padding: 35px 0 40px; }
 
-.loopingClass (@index) when (@index >= 0) {
-  @tmp: @index * 5px;
-  @font: @index * 3px;
+@for $index from 1 through 12 {
+  $tmp: $index * 5px;
+  $font: $index * 3px;
 
-  .fontsize@{index} { font-size: @font; }
+  .fontsize#{$index} { font-size: $font; }
 
-  .padding-top@{index} { padding-top: @tmp; }
-  .padding-bottom@{index} { padding-bottom: @tmp; }
-  .padding-left@{index} { padding-left: @tmp; }
-  .padding-right@{index} { padding-right: @tmp; }
+  .padding-top#{$index} { padding-top: $tmp; }
+  .padding-bottom#{$index} { padding-bottom: $tmp; }
+  .padding-left#{$index} { padding-left: $tmp; }
+  .padding-right#{$index} { padding-right: $tmp; }
 
-  .margin-top@{index} { margin-top: @tmp; }
-  .margin-bottom@{index} { margin-bottom: @tmp; }
-  .margin-left@{index} { margin-left: @tmp; }
-  .margin-right@{index} { margin-right: @tmp; }
-
-  .loopingClass(@index - 1);
+  .margin-top#{$index} { margin-top: $tmp; }
+  .margin-bottom#{$index} { margin-bottom: $tmp; }
+  .margin-left#{$index} { margin-left: $tmp; }
+  .margin-right#{$index} { margin-right: $tmp; }
 }
-
-@iterations: 12;
-.loopingClass (@iterations);
 
 @media (max-width: 499px) {
   .ss-copyright-bottom {

@@ -4,3 +4,5 @@ _site
 .DS_Store
 .idea
 node_modules/
+.jekyll-metadata
+.sass-cache/
