@@ -4,12 +4,33 @@
 <meta name="description" content="About StyleShare page">
 <meta name="author" content="StyleShare Inc.">
 
-<title>
-  {% if page.title %}
-    {{ page.title }} &middot; StyleShare
+{% if page.title %}
+  {% assign page_title = page.title %}
+{% else %}
+  {% assign page_title = 'About StyleShare' %}
+{% endif %}
+
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description"
+  {% if page.og_description %}
+    content="{{ page.og_description }}"
   {% else %}
-    About StyleShare
+    content="{{ include.og_description }}"
   {% endif %}
+>
+<meta property="og:site_name" content="About StyleShare">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image"
+  {% if page.og_image %}
+    content="{{ site.url }}/img/{{ page.og_image }}"
+  {% else %}
+    content="{{ site.url }}/img/og_image.jpg"
+  {% endif %}
+>
+
+<title>
+  {{ page_title }} &middot; StyleShare
 </title>
 
 <link href="//fonts.googleapis.com/css?family=PT+Sans:400italic,400,700italic,700" rel="stylesheet" type="text/css">
