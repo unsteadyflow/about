@@ -1,0 +1,316 @@
+
+/* default */
+// headroom
+.headroom--unpinned {
+    top: -60px !important;
+}
+
+
+.mobile-show { display: none !important; }
+
+.section { text-align: center; padding: 140px 0; }
+.divider { width: 50px; height: 3px; background-color: $gray-dark;  }
+
+.item-bold { font-weight: 700; }
+
+.header { font-weight: 300; }
+.header-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: $primary;
+  text-decoration: none;
+  border-bottom: 1px solid $primary;
+}
+.header-description {
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.6em;
+  color: white;
+}
+.btn {
+  &-wrapper {
+    position: relative;
+    margin-top: 28px;
+    padding-bottom: 4px; // 그림자 때문에 넣음, overflow 제거 후에 삭제
+    overflow: hidden;
+    z-index: 100;
+  }
+  &-appstore {
+    float: left;
+    width: 144px;
+    height: 50px;
+    background: url('../img/btn-appstore.png') no-repeat;
+    background-size: cover;
+    border: 1px solid $border;
+    transition: 0.3s all ease;
+    @include border-radius(4px);
+    @include shadow;
+  }
+  &-googleplay {
+    float: left;
+    width: 149px;
+    height: 50px;
+    margin-left: 20px;
+    background: url('../img/btn-googleplay.png') no-repeat;
+    background-size: cover;
+    border: 1px solid $border;
+    transition: 0.3s all ease;
+    @include border-radius(4px);
+    @include shadow;
+  }
+  &-appstore:hover, &-googleplay:hover {
+    border: 1px solid $gray-dark;
+  }
+  &-arrow {
+    width: 32px;
+    height: 32px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 27px;
+    border: 1px solid $primary;
+    @include border-radius(18px);
+    @include easeOutCirc(1000ms);
+    & a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+  &-arrow:hover { background-color: $primary; }
+  &-arrow a:hover { color: white; }
+
+  &-round {
+    display: inline-block;
+    padding: 12px 18px;
+    font-weight: 300;
+    color: $primary;
+    border: 1px solid $primary;
+    text-decoration: none;
+    transition: 0.2s all ease;
+    @include border-radius(4px);
+  }
+  &-round:hover {
+    color: white;
+    background-color: $primary;
+  }
+}
+.alarm-new {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  color: white;
+  background-color: $primary;
+  @include border-radius(9px);
+}
+
+/* default End */
+
+/* section-sub */
+.section-sub {
+  padding: 100px 0 90px;
+  .header {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0;
+    color: white;
+    &-description {
+      margin-top: 8px;
+      text-align: center;
+      font-weight: 300;
+      color: white;
+    }
+  }
+  .divider { margin: 20px 0; background-color: white; }
+}
+/* section-sub End */
+
+/* GNB */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  transition: 0.3s all ease;
+  z-index: 9999;
+  &-logo {
+    display: inline-block;
+    width: 126px;
+    height: 28px;
+    background: url('../img/logo-white.png');
+    background-size: cover;
+    margin-top: 16px;
+  }
+  .inline-list {
+    float: right;
+    margin-top: 21px;
+    &-item {
+      float: left;
+      margin-left: 50px;
+      font-weight: 500;
+      a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.3;
+        transition: 0.25s all ease;
+      }
+      a:hover { color: white; opacity: 1; }
+    }
+    .active {
+      color: $primary !important;
+      opacity: 1;
+      border-bottom: 2px solid $primary;
+    }
+    .active:hover {
+      color: $primary-dark !important;
+      opacity: 1;
+      border-bottom: 2px solid $primary-dark;
+    }
+  }
+}
+.nav-scroll {
+  background-color: white;
+  border-bottom: 1px solid $border;
+}
+.item-scroll {
+  color: $black !important;
+}
+
+/* GNB End */
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid $border;
+  background-color: $black;
+  overflow: hidden;
+  &-copyright {
+    float: left;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 66px;
+    color: $gray-light;
+  }
+  &-icon-wrapper {
+    float: right;
+    margin-top: 23px;
+    .icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 18px;
+      transition: 0.2s all ease;
+      &-fb { background: url('../img/icon-fb-light.png'); background-size: cover; }
+      &-insta { background: url('../img/icon-insta-light.png'); background-size: cover; }
+      &-blog { background: url('../img/icon-blog-light.png'); background-size: cover; }
+      &-fb:hover { background: url('../img/icon-fb.png'); background-size: cover; }
+      &-insta:hover { background: url('../img/icon-insta.png'); background-size: cover; }
+      &-blog:hover { background: url('../img/icon-blog.png'); background-size: cover; }
+    }
+  }
+}
+/* footer End */
+
+/* narrow */
+@include respond-to('narrow') {
+  body { margin-top: 50px !important; }
+  .section { padding: 75px 0; }
+  .mobile-show { display: block !important; }
+  .mobile-none { display: none !important; }
+  .header-link, .header-description { font-size: 14px; }
+  .btn {
+    &-wrapper {
+      display: inline-block;
+      margin: 25px auto 0;
+    }
+    &-appstore {
+      width: 127px;
+      height: 44px;
+    }
+    &-googleplay {
+      width: 131px;
+      height: 44px;
+      margin-left: 10px;
+    }
+  }
+  .section-sub {
+    padding: 110px 0 50px;
+    .header {
+      font-size: 24px;
+      &-description {
+        max-width: 250px;
+        margin: 5px auto 0;
+      }
+    }
+  }
+  .nav {
+    height: 110px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid $border;
+    &-logo {
+      background: url('../img/logo-black.png');
+      background-size: cover;
+    }
+    .inline-list {
+      float: none;
+      display: inline-block;
+      margin-top: 30px;
+      &-item {
+        font-size: 14px;
+        margin-left: 24px;
+        a { color: $black; }
+        a:hover { color: $black; }
+      }
+      &-item:first-child { margin-left: 0; }
+    }
+  }
+  .nav:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $border;
+    top: 60px;
+  }
+  .footer {
+    &-copyright {
+      font-size: 12px;
+    }
+    &-icon-wrapper {
+      .icon {
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+/* narrow End */
+
+
+
+
+
+
+
+
+
+
+
+
+

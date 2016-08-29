@@ -1,0 +1,560 @@
+body {
+  overflow-x: hidden;
+}
+/* section-intro */
+.section-intro {
+  position: relative;
+  max-height: 800px;
+  height: 800px;
+  overflow: hidden;
+  z-index: 15;
+  .content {
+    &-wrapper {
+      margin-top: 310px;
+      text-align: center;
+      overflow: hidden;
+    }
+    &-kor {
+      text-align: center;
+      color: white;
+      line-height: 1.5em;
+    }
+    &-kor span { position: relative; }
+    // &-kor span:after {
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   left: -4px; bottom: 1px;
+    //   width: 102%;
+    //   height: 3px;
+    //   background-color: $primary;
+    //   z-index: -20;
+    // }
+    &-slash {
+      width: 50px;
+      height: 1px;
+      margin: 24px auto 35px;
+      background-color: white;
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+    }
+    &-eng {
+      padding-bottom: 4px;
+      color: $primary;
+    }
+  }
+  .btn-arrow {
+    position: absolute;
+    left: 50%; bottom: 30px;
+    margin-left: -16px;
+    line-height: 29px;
+    color: white;
+    border: 1px solid white;
+    opacity: 0.4;
+  }
+  .btn-arrow:hover {
+    background-color: transparent;
+  }
+  &-video {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+       -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    background: url('../img/section-intro-bg.png') no-repeat;
+    background-size: cover;
+    z-index: -100;
+  }
+  &-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/section-intro-bg.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -100;
+  }
+}
+/* section-intro End */
+
+/* section-app */
+.section-app {
+  position: relative;
+  padding: 170px 0 160px;
+  text-align: left;
+  // background: url('../img/section-app-bg.png') no-repeat;
+  // background-position: center bottom;
+  .content {
+    &-wrapper { padding-left: 10%; }
+    &-header {
+      max-width: 400px;
+      line-height: 1.3em;
+    }
+    &-description {
+      max-width: 400px;
+      margin-top: 20px;
+      line-height: 1.6em;
+      color: $gray;
+    }
+  }
+  .iphone {
+    &-wrapper {
+      position: relative;
+      padding-left: 1%;
+    }
+    &-img-rotate {
+      position: absolute;
+      top: -260px;
+      width: 476px*0.9;
+      height: 741px*0.9;
+      background: url('../img/section-app-iphone-rotate.png') no-repeat;
+      background-size: cover;
+      @include easeOutBack(2000ms);
+      z-index: 10;
+    }
+    &-shadow {
+      position: absolute;
+      top: 500px;
+      width: 385px;
+      height: 20px;
+      background: url('../img/section-app-shadow.png') no-repeat;
+      background-size: cover;
+      opacity: 0;
+      @include easeOutBack(2000ms);
+    }
+  }
+  &-pattern {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: 180px;
+    background: url('../img/section-app-pattern.png') repeat-x;
+    background-size: auto;
+    z-index: -200;
+  }
+}
+/* section-app End */
+
+/* section-press */
+.section-press {
+  padding: 140px 0 120px;
+  // background-color: #f9f9f9;
+  background: url('../img/section-press-bg1.png');
+  background-size: cover;
+  .row { margin-top: 45px; }
+  .row:last-child { margin-top: 24px; }
+  .press-wrapper {
+    border: 1px solid $border;
+    @include border-radius(4px);
+    @include shadow;
+  }
+  .img-wrapper {
+    overflow: hidden;
+    @include border-radius(4px 0 0 4px);
+  }
+
+  .content {
+    &-wrapper {
+      min-height: 260px;
+      padding: 45px 40px 20px 35px;
+      text-align: left;
+      background-color: white;
+      overflow: hidden;
+      @include border-radius(0 4px 4px 0);
+    }
+    &-img {
+      margin-left: -25%;
+      max-height: 260px;
+    }
+    &-logo { height: 22px; }
+    &-summary {
+      max-width: 200px;
+      margin-top: 20px;
+      font-size: 16px;
+      color: $gray;
+    }
+  }
+  .logo {
+    &-besuccess { height: 32px; margin-top: -10px; }
+    &-platum, &-chosunbiz { height: 27px; margin-top: -5px; }
+  }
+  .press-wrapper.col.col-6 { width: 49%; }
+  .press-wrapper.col.col-6:last-child { margin-left: 2%; }
+  .press-wrapper.col.col-9 { width: 73.5%; }
+  .press-wrapper.col.col-3 { width: 24.5%; margin-left: 2%; }
+
+}
+/* section-press End */
+
+/* section-hiring */
+.section-hiring {
+  background: url('../img/section-hiring-bg1.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  .header-wrapper {
+    float: left;
+    text-align: left;
+    .header-description {
+      font-weight: 100;
+      line-height: 1.6em;
+      color: $black;
+    }
+    .divider {
+      margin: 28px 0 25px;
+      background-color: $border;
+    }
+  }
+  .row-wrapper { margin-top: -30px; }
+  .row { margin-top: 30px; }
+  .row:last-child { margin-top: 24px; }
+  .hiring {
+    &-card {
+      float: right;
+      width: 29%;
+      margin-left: 2.5%;
+      padding: 50px 0 50px 30px;
+      text-align: left;
+      background-color: white;
+      border: 1px solid $border;
+      @include border-radius(4px);
+      @include shadow;
+    }
+    &-team-wrapper { overflow: hidden; }
+    &-team {
+      float: left;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &-position {
+      margin-top: 8px;
+      font-size: 18px;
+      & span { color: $gray; }
+    }
+  }
+  .empty {
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
+}
+/* section-hiring End */
+
+/* section-blog */
+.section-blog {
+  padding: 215px 0;
+  background: url('../img/section-blog-bg1.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  .header { color: white; }
+  .header-description {
+    margin-top: 10px;
+    font-weight: 100;
+  }
+  .btn {
+    &-wrapper { margin-top: 20px; }
+    &-round {
+        color: white;
+        border: 1px solid white;
+      }
+    &-round:hover { background-color: rgba(255,255,255,0.3); }
+  }
+}
+/* section-blog End */
+
+/* seciton-contact */
+.section-contact {
+  position: relative;
+  height: 500px;
+  padding: 0;
+  .map-wrapper {
+    background-color: $gray;
+  }
+  .contact-wrapper {
+    padding: 90px 0 0 70px;
+    text-align: left;
+    color: $black;
+    .divider {
+      margin: 30px 0;
+      background-color: $border;
+      opacity: 0.5;
+    }
+    .address {
+      &-wrapper { max-width: 400px; }
+      &-kor { font-size: 16px; }
+      &-eng {
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: 100;
+        color: $gray-dark;
+      }
+    }
+    .info-list {
+      margin-top: 35px;
+      font-size: 16px;
+      font-weight: 100;
+      color: $gray-dark;
+      &-item:nth-child(n+1) { margin-top: 15px; }
+      .list-item-bold {
+        margin-right: 20px;
+        color: $gray-light;
+        font-weight: 300;
+      }
+      .tel { margin-right: 40px; }
+    }
+  }
+}
+/* seciton-contact End */
+
+/* wide */
+@include respond-to('wide') {
+  .section-press {
+  height: 1020px;
+    .row { position: relative; margin-top: 45px; }
+    .press-wrapper {
+      border: 0;
+      box-shadow: none;
+    }
+    .img-wrapper {
+      position: absolute;
+      width: 500px;
+      height: 320px;
+    }
+    .content {
+      &-wrapper {
+        position: absolute;
+        border: 1px solid $border;
+        @include border-radius(4px);
+      }
+      &-img {
+        margin: 0;
+        @include border-radius(4px);
+      }
+    }
+
+    // vogue
+    .vogue {
+      top: 30px; left: 100px;
+      &-img-wrap { right: 0; z-index: 10;}
+      &-content-wrap {
+        top: 40px; left: -160px;
+        width: 610px;
+      }
+    }
+    // besuccess
+    .besuccess {
+      top: 0; left: 20px;
+      &-img-wrap { left: 0; }
+      &-content-wrap {
+        top: 165px;
+        width: 340px;
+        min-height: 240px;
+        z-index: 20;
+        .content-summary { max-width: 280px; }
+      }
+    }
+    // platum
+    .platum {
+      top: 350px;
+      &-img-wrap {
+        top: -30px; left: -10px;
+        z-index: 10;
+      }
+      &-content-wrap {
+        left: 120px;
+        width: 610px;
+        padding-left: 360px;
+      }
+    }
+    // chosunbiz
+    .chosunbiz {
+      top: 335px; right: 100px;
+      z-index: 10;
+      &-img-wrap { display: none; }
+    }
+  }
+}
+/* wide End */
+
+/* narrow */
+@include respond-to('narrow') {
+  .section-intro {
+    height: 460px;
+    .content {
+      &-wrapper {
+        max-width: 240px;
+        margin: 205px auto 0;
+      }
+    }
+    .btn-arrow {
+      bottom: 25px;
+      width: 26px;
+      height: 26px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &-video {
+      width: auto;
+      height: 460px;
+    }
+  }
+  .section-app {
+    padding: 75px 0 30px;
+    text-align: center;
+    background: none;
+    .content {
+      &-wrapper { padding: 0; }
+      &-header, &-description {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      &-description { margin-top: 15px; }
+    }
+    &-pattern {
+      height: 120px;
+      background-size: cover;
+    }
+    .iphone {
+      &-wrapper { padding: 0; }
+      &-img {
+        max-width: 312px;
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+      }
+      &-feed-wrapper { overflow: hidden; }
+      &-feed {
+        position: absolute;
+        top: 360px; left: -30px;
+        width: 150%;
+        height: 380px;
+        background: url('../img/section-app-feed.png') no-repeat;
+        background-size: 100%;
+        z-index: -100;
+      }
+    }
+  }
+
+  .section-press-slider {
+    padding: 50px 0 60px;
+    text-align: center;
+    border-top: 1px solid #f9f9f9;
+    background: url('../img/section-press-bg1.png');
+    background-size: cover;
+    .container { padding: 0; }
+    .press {
+      &-container { margin-top: 35px; }
+      &-wrapper {
+        text-align: left;
+        border: 1px solid $border;
+        background-color: white;
+        overflow: hidden;
+        box-sizing: border-box;
+        @include border-radius(4px);
+        @include shadow;
+      }
+    }
+    .img-wrapper {
+      position: relative;
+      height: 160px;
+      overflow: hidden;
+    }
+    .content {
+      &-wrapper {
+        height: 220px;
+        padding: 30px;
+      }
+      &-img {
+        position: absolute;
+        top: 0; left: 50%;
+        width: 100% !important;
+        height: auto;
+        -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+      }
+      &-logo { width: auto !important; height: 18px; }
+      &-summary {
+        margin: 20px auto 0;
+        font-size: 14px;
+        color: $gray;
+      }
+    }
+    .logo {
+      &-besuccess { height: 28px; margin-top: -10px; }
+      &-platum, &-chosunbiz { height: 21px; }
+    }
+  }
+
+  .section-hiring {
+    .container { padding: 0; }
+    .header-wrapper {
+      float: none;
+      text-align: center;
+      .divider { margin: 15px auto; }
+      .header-description {
+        display: inline-block;
+        max-width: 240px;
+        margin-top: 10px;
+      }
+    }
+    .hiring-container { margin-top: 25px; }
+    .hiring-card {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+  }
+  .section-blog {
+    padding: 130px 0 120px;
+    .header-description {
+      max-width: 250px;
+      margin: 10px auto 0;
+      line-height: 1.65em;
+    }
+  }
+  .section-contact {
+    height: auto;
+    .map-wrapper { height: 350px; }
+    .contact-wrapper {
+      padding: 50px 40px 70px;
+      .divider { margin: 20px 0; }
+      .address {
+        &-kor { font-size: 14px; }
+        &-eng { font-size: 14px; }
+      }
+      .info-list {
+        margin-top: 20px;
+        &-item { font-size: 14px; }
+      }
+    }
+  }
+}
+/* narrow End */
+
+/* section-app-feed size */
+@media (max-width: 550px) {
+  .section-app {
+    .iphone {
+      &-feed {
+        position: absolute;
+        top: 420px; left: -30px;
+        width: 170%;
+        height: 380px;
+        background: url('../img/section-app-feed.png') no-repeat;
+        background-size: 100%;
+        z-index: -100;
+      }
+    }
+  }
+}
+/* section-app-feed size End */
+
+
