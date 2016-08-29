@@ -1,0 +1,117 @@
+.section-sub-contact, .section-sub-address {
+  .header {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    color: $black;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.sub-contact {
+  background: url('../img/section-contact-bg.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-sub-contact {
+  padding: 30px 0;
+  .cowork {
+    &-container {
+    padding: 35px 40px 30px;
+    text-align: left;
+    border: 1px solid $primary;
+    overflow: hidden;
+    @include border-radius(4px);
+    }
+    &-wrapper { padding: 25px; }
+    &-body-wrapper { margin-top: 25px; }
+    &-body { font-size: 16px; }
+  }
+    .btn-round:nth-child(n+2) { margin-left: 12px; }
+}
+
+.section-sub-address {
+  position: relative;
+  padding: 30px 25px 60px;
+  text-align: left;
+  .email-container {
+    position: relative;
+    padding: 0 25px 0 65px;
+  }
+  .address-container {
+    padding: 0 25px;
+  }
+  .email {
+    &-wrapper { margin-top: 25px; }
+    &-description {
+      max-width: 350px;
+      font-size: 16px;
+    }
+    &-list {
+      margin-top: 15px;
+      padding-left: 30px;
+      &-item {
+        margin-top: 6px;
+        list-style-type: initial;
+      }
+    }
+    &-team {
+      display: inline-block;
+      width: 80px;
+      font-size: 16px;
+    }
+    &-body {
+      display: inline-block;
+      font-size: 16px;
+    }
+  }
+  .address {
+    &-wrapper { margin-top: 25px; }
+    &-body-kor { max-width: 400px; font-size: 16px; }
+    &-body-eng {
+      max-width: 400px;
+      margin-top: 14px;
+      font-size: 16px;
+      font-weight: 100;
+      color: $gray-dark;
+    }
+  }
+}
+.contact-map-wrapper {
+  position: relative;
+  height: 600px;
+}
+
+@include respond-to('narrow') {
+  .section-sub-contact {
+    padding: 20px 0;
+    .header { font-size: 18px; }
+    .cowork {
+      &-container { padding: 20px 0; }
+      &-wrapper { padding: 10px 25px; }
+      &-wrapper:last-child { padding-top: 25px; }
+      &-header { font-size: 16px; }
+      &-body-wrapper { margin-top: 20px; }
+      &-body { font-size: 14px; }
+    }
+  }
+  .section-sub-address {
+    .header { font-size: 18px; }
+    .email {
+      &-container { padding: 0; }
+      &-wrapper { margin-top: 20px; }
+      &-description { max-width: 100%; font-size: 14px; }
+      &-list { margin-top: 10px; }
+      &-team { font-size: 14px; }
+      &-body { font-size: 14px; }
+    }
+    .address {
+      &-container { margin-top: 35px; padding: 0; }
+      &-wrapper { margin-top: 20px; }
+      &-body-kor { font-size: 14px; }
+      &-body-eng { margin-top: 10px; font-size: 14px; }
+    }
+  }
+  .contact-map-wrapper { height: 300px; }
+}

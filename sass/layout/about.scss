@@ -1,0 +1,213 @@
+.sub-about {
+  background: url('../img/section-about-bg.png');
+  background-position: center;
+  background-size: cover;
+}
+.about {
+  &-header {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4em;
+    border-bottom: 2px solid $primary;
+  }
+  &-content-wrapper { overflow: hidden; }
+  &-content-wrapper:nth-child(n+2) { margin-top: 80px; }
+  &-description:nth-child(n+2) { margin-top: 30px; }
+}
+
+.description-wrapper {
+  margin-top: 85px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.section-sub-about {
+  padding: 90px 0;
+  text-align: left;
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .shopping {
+    border: none;
+    .underline { border-bottom: 2px solid $primary; }
+  }
+  .margin-amend { margin-top: 115px; }
+}
+
+.section-sub-believe {
+  padding: 90px 0 100px;
+  text-align: left;
+  background: url('../img/about-believe-bg.png');
+  background-size: cover;
+  background-position: center;
+  // background-color: #f9f9f9;
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .believe-content-wrapper {
+    margin-top: 35px;
+    border-top: 1px solid $border;
+  }
+  .about {
+    &-sub-header {
+      display: inline-block;
+      margin-top: 45px;
+      font-size: 20px;
+      font-weight: 700;
+      border-bottom: 2px solid $gray-light;
+    }
+    &-sub-header:nth-child(n+2) { margin-top: 55px; }
+  }
+  .mission {
+    &-img-wrapper { margin-top: 45px; }
+    &-img {
+      width: 100%;
+      height: auto;
+    }
+    &-list {
+      margin-top: 50px;
+      font-size: 15px;
+      line-height: 1.6em;
+      overflow: hidden;
+      &-item { padding: 0 10px 0 10px; }
+      &-item:first-child { padding: 0 20px 0 0; }
+      &-item:last-child { padding: 0 0 0 20px; }
+    }
+    &-list-header {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+}
+
+.section-sub-history {
+  padding: 90px 0 100px;
+  text-align: left;
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .description-wrapper { margin-top: 60px; }
+  .history {
+    &-wrapper {
+      position: relative;
+      padding-bottom: 60px;
+    }
+    &-wrapper:before {
+      content: '';
+      position: absolute;
+      top: 0; left: 83px; bottom: 0;
+      width: 1px;
+      background-color: $border;
+    }
+    &-date { font-size: 16px; }
+    &-list {
+      position: relative;
+      margin-top: 60px;
+      font-size: 22px;
+      font-weight: 300;
+      &-item {
+        position: relative;
+        margin-top: 40px;
+        margin-left: 110px;
+      }
+      &-item:before {
+        content: '';
+        position: absolute;
+        top: 8px; left: -31px;
+        width: 10px;
+        height: 10px;
+        background-color: $gray-light;
+        @include border-radius(5px);
+      }
+    }
+    &-list:before {
+      content: '';
+      position: absolute;
+      top: 5px; left: 77px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid $primary;
+      background-color: white;
+      @include border-radius(7px);
+    }
+    &-list:first-child { margin-top: 70px; }
+    &-body {
+      font-size: 16px;
+      color: $gray;
+    }
+  }
+}
+
+// narrow
+@include respond-to('narrow') {
+  .about {
+    &-header { font-size: 18px; }
+    &-description {
+      margin-top: 20px;
+      padding: 0;
+    }
+    &-description:nth-child(n+2){ margin-top: 15px; }
+  }
+
+  .section-sub-about {
+    padding: 50px 0 0;
+    .container { padding: 0 35px; }
+    .about-content-wrapper {
+      margin-top: 50px;
+      .about-header { margin-top: 40px; }
+      .about-header:first-child { margin-top: 0; }
+    }
+    .about-content-wrapper:first-child { margin: 0; }
+    .description-wrapper { margin-top: 0; padding: 0; }
+    .shopping {
+      border-bottom: 2px solid $primary;
+      .underline { border: none; }
+    }
+  }
+
+  .section-sub-believe {
+    padding: 70px 0;
+    .container { padding: 0 35px; }
+    .description-wrapper { margin: 0px; padding: 0; }
+    .believe-content-wrapper {  margin-top: 25px; }
+    .about-sub-header { margin-top: 25px; font-size: 16px; }
+    .about-sub-header:nth-child(n+2) { margin-top: 25px; }
+    .mission {
+      &-img-wrapper { margin-top: 30px; }
+      &-list {
+        margin-top: 15px;
+        &-item { margin-top: 15px; padding: 0; }
+        &-item:first-child { padding: 0; }
+        &-item:last-child { padding: 0; }
+        &-header { font-size: 17px; margin-bottom: 6px; }
+      }
+    }
+  }
+
+  .section-sub-history {
+    padding: 60px 0;
+    .container { padding: 0 35px; }
+    .description-wrapper { margin: 0; padding: 0; }
+    .history {
+      &-wrapper { padding: 0; }
+      &-wrapper:before { left: 73px; }
+      &-list {
+        padding-top: 3px;
+        font-size: 18px;
+        &-item { margin-left: 100px; }
+        &-item:before { top: 6px; }
+      }
+      &-list:before { left: 67px; }
+      &-list:first-child { margin-top: 50px; }
+      &-date { font-size: 14px; }
+      &-body { font-size: 14px; }
+    }
+  }
+}

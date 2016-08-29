@@ -1,0 +1,106 @@
+.sub-press {
+  background: url('../img/section-press-bg.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.section-sub-press {
+  padding: 15px 0 40px;
+  .press {
+    &-page { display: none; }
+    &-container { padding: 15px; }
+    &-wrapper {
+      padding: 50px 40px;
+      text-align: left;
+      border: 1px solid $border;
+      @include border-radius(4px);
+      @include shadow;
+    }
+    &-date-wrapper { overflow: hidden; }
+    &-company {
+      float: left;
+      font-size: 14px;
+      font-weight: 300;
+      color: $gray-light;
+    }
+    &-date {
+      float: left;
+      margin-left: 8px;
+      font-size: 14px;
+      color: $gray-light;
+    }
+    &-header {
+      margin-top: 22px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &-content {
+      margin-top: 16px;
+      font-size: 16px;
+      color: $gray-dark;
+      word-break: normal;
+    }
+  }
+  .btn-wrapper { margin-top: 20px; }
+  .pagenation-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    .page {
+      &-prev {
+        float: left;
+        padding: 14px 20px;
+      }
+      &-next {
+        float: right;
+        padding: 14px 20px;
+      }
+      &-list {
+        margin: 0 auto;
+        clear: both;
+        overflow: hidden;
+        &-item {
+          float: left;
+          padding: 14px 20px;
+          font-weight: 100;
+          color: $gray-light;
+        }
+        &-item:hover, .page-prev:hover, .page-next:hover {
+          background-color: $background;
+        }
+        .active {
+          font-weight: 300;
+          color: $black;
+          border-bottom: 2px solid $gray-light;
+        }
+        .active:hover { background-color: $background; }
+      }
+    }
+    .inline-list { display: inline-block; }
+  }
+  .show { display: block; }
+  .disabled { color: $border; }
+}
+
+@include respond-to('narrow') {
+  .section-sub-press {
+    padding: 10px 0 40px;
+    .press {
+      &-container { padding: 10px 0; }
+      &-wrapper { padding: 45px 35px 40px; }
+      &-header {
+        margin-top: 12px;
+        line-height: 1.5em;
+        font-size: 16px;
+      }
+      &-content {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    }
+    .pagenation-wrapper { padding-top: 0px; }
+  }
+}

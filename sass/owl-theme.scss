@@ -1,0 +1,15 @@
+.owl-stage { padding-bottom: 4px; }
+.owl-item { width: 270px !important; }
+.owl-dots {
+  display: inline-block;
+  margin-top: 25px;
+  .owl-dot {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: $border;
+    margin: 0 5px;
+    @include border-radius(4px);
+  }
+  .active { background-color: $primary; }
+}

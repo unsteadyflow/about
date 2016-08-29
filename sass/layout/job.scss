@@ -1,0 +1,178 @@
+.sub-job {
+  background: url('../img/section-job-bg.png');
+  background-position: center;
+  background-size: cover;
+}
+.section-hiring-process {
+  padding: 30px 0;
+  text-align: left;
+  .header {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    color: $black;
+    border-bottom: 2px solid $primary;
+    &-wrapper { padding-left: 25px; }
+  }
+  .row { margin-top: 30px; }
+  .process {
+    &-container {
+      padding: 55px 40px 50px;
+      border: 1px solid $primary;
+      overflow: hidden;
+      @include border-radius(4px);
+    }
+    &-wrapper { padding: 25px; }
+    &-num {
+      margin-right: 10px;
+      font-weight: 300;
+      color: $primary;
+    }
+    &-header {
+      padding: 0 6px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    &-description {
+      padding: 0 6px;
+      font-size: 16px;
+      color: $gray;
+    }
+    &-footnote {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 0 25px;
+      font-size: 14px;
+      color: $gray;
+    }
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    margin: 10px auto;
+    background-color: $border;
+  }
+}
+
+.section-job-table {
+  padding: 0 0 80px;
+  .job-table {
+    width: 100%;
+    font-size: 16px;
+    &-content { background-color: $background; }
+    .table-content-wrapper { padding: 20px 30px 70px; }
+    .content {
+      &-wrapper { margin-top: 50px; }
+      &-header {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 2px solid $border;
+      }
+      &-description {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 100;
+      }
+      &-description:last-child { margin-top: 8px; }
+      &-list {
+        margin-top: 25px;
+        padding-left: 20px;
+        &-item {
+          max-width: 600px;
+          margin-top: 16px;
+          font-size: 16px;
+          line-height: 1.6em;
+          list-style-type: initial;
+          .item-sub-body {
+            margin-top: 6px;
+            font-size: 16px;
+            font-weight: 100;
+          }
+        }
+      }
+      &-sub-list {
+        padding-left: 20px;
+        &-item {
+          margin-top: 12px;
+          list-style-type: circle;
+        }
+      }
+    }
+    thead {
+      tr {
+        height: 60px;
+        min-height: 60px;
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+        th {
+          padding: 0 30px;
+          text-align: left;
+          vertical-align: middle;
+        }
+      }
+    }
+    tbody {
+      tr {
+        height: 60px;
+        min-height: 60px;
+        border-bottom: 1px solid $border;
+        transition: 0.2s all ease;
+        td {
+          padding: 0 30px;
+          font-weight: 100;
+          text-align: left;
+          vertical-align: middle;
+        }
+      }
+      tr:hover { background-color: #f9fefc; }
+    }
+    .table-list-view { display: none; }
+  }
+}
+
+
+// narrow
+@include respond-to('narrow') {
+  .section-hiring-process {
+    padding: 20px 0;
+    .row { margin-top: 15px; }
+    .row:last-child { margin-top: 0; }
+    .header { font-size: 18px; }
+    .process {
+      &-container { padding: 30px 0 25px; }
+      &-wrapper { padding: 25px; }
+      &-header { font-size: 16px; }
+      &-description { font-size: 14px; }
+      &-footnote {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+  .section-job-table {
+    .job-table {
+      font-size: 14px;
+      line-height: 1.4em;
+      .table-content-wrapper { padding: 0 10px 30px; }
+      .content {
+        &-wrapper { margin-top: 40px; }
+        &-wrapper:first-child { margin-top: 30px; }
+        &-header { font-size: 16px; }
+        &-description {
+          margin-top: 15px;
+          font-size: 14px;
+        }
+        &-list {
+          margin-top: 15px;
+          &-item {
+            font-size: 14px;
+            .item-sub-body { font-size: 14px; }
+          }
+        }
+      }
+      thead { tr { th { padding: 0 6px; } } }
+      tbody { tr { td { padding: 15px 6px; } } }
+    }
+  }
+}
