@@ -28,17 +28,17 @@ function navScroll() {
   var $inlineListItem = $('.inline-list-item a');
 
   /* nav-scroll */
-  if (window.location.pathname == '/ss-web/') {
+  if (window.location.pathname == '/') {
     if(winWidth >= 850){
       if ( ($nav.offset().top)+(winHeight/2) > winHeight) {
           $nav.addClass("nav-scroll");
-          $navLogo.css("background", "url('../ss-web/img/logo-black.png')");
+          $navLogo.css("background", "url('../img/logo-black.png')");
           $navLogo.css("background-size", "cover");
           $inlineListItem.addClass("item-scroll");
       }
       else {
           $nav.removeClass("nav-scroll");
-          $navLogo.css("background", "url('../ss-web/img/logo-white.png')");
+          $navLogo.css("background", "url('../img/logo-white.png')");
           $navLogo.css("background-size", "cover");
           $inlineListItem.removeClass("item-scroll");
       }
