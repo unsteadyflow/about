@@ -39,7 +39,7 @@
             <ul class="inline-list">
               <li class="inline-list-item"><a href="/about">About</a></li>
               <li class="inline-list-item"><a href="/team">Team</a></li>
-              <li class="inline-list-item"><a href="/job">Job</a></li>
+              {% if site.hiring %}<li class="inline-list-item"><a href="/job">Job</a></li>{% endif %}
               <li class="inline-list-item"><a href="/press">Press</a></li>
               <li class="inline-list-item mobile-none"><a href="http://styleshare.github.io" target="_blank">Blog</a></li>
               <li class="inline-list-item"><a href="/contact">Contact</a></li>
@@ -65,10 +65,12 @@
                 <a class="item-scroll{% if page.url == '/team.html' %} active {% endif %}"
                    href="/team">Team</a>
               </li>
+              {% if site.hiring %}
               <li class="inline-list-item">
                 <a class="item-scroll{% if page.url == '/job.html' %} active {% endif %}"
                    href="/job">Job</a>
               </li>
+              {% endif %}
               <li class="inline-list-item">
                 <a class="item-scroll{% if page.url == '/press.html' %} active {% endif %}"
                    href="/press">Press</a>

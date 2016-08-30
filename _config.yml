@@ -1,6 +1,7 @@
 title: About StyleShare
 email: dev@stylesha.re
 url: http://about.stylesha.re
+hiring: false
 
 highlighter: pygments
 markdown: redcarpet
