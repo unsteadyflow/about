@@ -9,3 +9,6 @@ highlighter: pygments
 markdown: redcarpet
 gems:
   - jekyll-sitemap
+
+sass:
+  style: compressed
