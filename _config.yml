@@ -4,3 +4,5 @@ url: http://about.stylesha.re
 
 highlighter: pygments
 markdown: redcarpet
+gems:
+  - jekyll-sitemap
