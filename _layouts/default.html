@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>StyleShare</title>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon-precomposed" href="ico/icon.png">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+  </head>
+
+  {% if page.url != '/' %}
+    <style type="text/css">
+      body { margin-top: 60px; }
+      .nav-logo {
+        background: url('../img/logo-black.png');
+        background-size: cover;
+      }
+    </style>
+  {% endif %}
+
+  <body>
+    {% if page.url == '/' %}
+    <div id="nav" class="nav">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3">
+            <a class="nav-logo" href="/"></a>
+          </div>
+          <div class="col col-9">
+            <ul class="inline-list">
+              <li class="inline-list-item"><a href="/about">About</a></li>
+              <li class="inline-list-item"><a href="/team">Team</a></li>
+              <li class="inline-list-item"><a href="/job">Job</a></li>
+              <li class="inline-list-item"><a href="/press">Press</a></li>
+              <li class="inline-list-item mobile-none"><a href="http://styleshare.github.io" target="_blank">Blog</a></li>
+              <li class="inline-list-item"><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div id="nav" class="nav nav-scroll">
+      <div class="container">
+        <div class="row">
+          <div class="col col-3">
+            <a class="nav-logo" href="/"></a>
+          </div>
+          <div class="col col-9">
+            <ul class="inline-list">
+              <li class="inline-list-item">
+                <a class="item-scroll{% if page.url == '/about.html' %} active {% endif %}"
+                   href="/about">About</a>
+              </li>
+              <li class="inline-list-item">
+                <a class="item-scroll{% if page.url == '/team.html' %} active {% endif %}"
+                   href="/team">Team</a>
+              </li>
+              <li class="inline-list-item">
+                <a class="item-scroll{% if page.url == '/job.html' %} active {% endif %}"
+                   href="/job">Job</a>
+              </li>
+              <li class="inline-list-item">
+                <a class="item-scroll{% if page.url == '/press.html' %} active {% endif %}"
+                   href="/press">Press</a>
+              </li>
+              <li class="inline-list-item mobile-none">
+                <a class="item-scroll" href="http://styleshare.github.io" target="_blank" >Blog</a>
+              </li>
+              <li class="inline-list-item">
+                <a class="item-scroll{% if page.url == '/contact.html' %} active {% endif %}"
+                   href="/contact">
+                  Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+    <footer class="footer">
+      <div class="container">
+        <h4 class="footer-copyright">© StyleShare. All rights reserved.</h4>
+        <div class="footer-icon-wrapper">
+          <a class="icon icon-fb" href="https://www.facebook.com/StyleShareApp" target="_blank"></a>
+          <a class="icon icon-insta" href="https://www.instagram.com/styleshare_kr/" target="_blank"></a>
+          <a class="icon icon-blog" href="http://blog.stylesha.re/" target="_blank"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
