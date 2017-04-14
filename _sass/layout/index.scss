@@ -339,7 +339,7 @@ body {
     }
 
     // vogue
-    .vogue {
+    .first {
       top: 30px; left: 100px;
       &-img-wrap { right: 0; z-index: 10;}
       &-content-wrap {
@@ -347,8 +347,8 @@ body {
         width: 610px;
       }
     }
-    // besuccess
-    .besuccess {
+    // platum - 마켓페스트 기사
+    .second {
       top: 0; left: 20px;
       &-img-wrap { left: 0; }
       &-content-wrap {
@@ -360,7 +360,7 @@ body {
       }
     }
     // platum
-    .platum {
+    .third {
       top: 350px;
       &-img-wrap {
         top: -30px; left: -10px;
@@ -373,7 +373,7 @@ body {
       }
     }
     // chosunbiz
-    .chosunbiz {
+    .fourth {
       top: 335px; right: 100px;
       z-index: 10;
       &-img-wrap { display: none; }

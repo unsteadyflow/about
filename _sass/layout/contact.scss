@@ -1,4 +1,4 @@
-.section-sub-contact, .section-sub-address {
+.section-sub-contact, .section-sub-info {
   .header {
     display: inline-block;
     font-size: 25px;
@@ -31,7 +31,7 @@
     .btn-round:nth-child(n+2) { margin-left: 12px; }
 }
 
-.section-sub-address {
+.section-sub-info {
   position: relative;
   padding: 30px 25px 60px;
   text-align: left;
@@ -41,6 +41,10 @@
   }
   .address-container {
     padding: 0 25px;
+  }
+  .feedback {
+    &-wrapper { margin-top: 25px; }
+    &-body { max-width: 400px; font-size: 16px; }
   }
   .email {
     &-wrapper { margin-top: 25px; }
@@ -96,8 +100,15 @@
       &-body { font-size: 14px; }
     }
   }
-  .section-sub-address {
+  .section-sub-info {
+    .container > div:nth-child(n+2) { margin-top: 35px; }
+
     .header { font-size: 18px; }
+    .feedback {
+      &-container { padding: 0; }
+      &-wrapper { margin-top: 20px; }
+      &-body { font-size: 14px; }
+    }
     .email {
       &-container { padding: 0; }
       &-wrapper { margin-top: 20px; }
@@ -107,7 +118,7 @@
       &-body { font-size: 14px; }
     }
     .address {
-      &-container { margin-top: 35px; padding: 0; }
+      &-container { padding: 0; }
       &-wrapper { margin-top: 20px; }
       &-body-kor { font-size: 14px; }
       &-body-eng { margin-top: 10px; font-size: 14px; }
