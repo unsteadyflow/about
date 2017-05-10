@@ -48,7 +48,7 @@ function navScroll() {
 
 /* Map */
 function initMap() {
-  var myLatLng = {lat: 37.52428, lng: 127.0495799};
+  var myLatLng = {lat: 37.5217139, lng: 127.0326055};
   var winWidth = $(window).width();
   var dragflag = false;
   if( winWidth >= 850 ){
@@ -67,7 +67,7 @@ function initMap() {
   var image = 'img/marker.png';
   var marker = new google.maps.Marker({
     map: map,
-    position: {lat: 37.5239573, lng: 127.0495906},
+    position: {lat: 37.5215183, lng: 127.0326591},
     icon: image
   });
 };
