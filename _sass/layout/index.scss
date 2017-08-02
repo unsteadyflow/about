@@ -246,12 +246,9 @@ body {
 }
 /* section-hiring End */
 
-/* section-blog */
-.section-blog {
-  padding: 215px 0;
-  background: url('../img/section-blog-bg1.jpg') no-repeat;
-  background-position: center;
-  background-size: cover;
+/* section-content */
+.section-content {
+  padding: 180px 0;
   .header { color: white; }
   .header-description {
     margin-top: 10px;
@@ -266,7 +263,22 @@ body {
     &-round:hover { background-color: rgba(255,255,255,0.3); }
   }
 }
-/* section-blog End */
+.blog {
+  background: url('../img/section-blog-bg1.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.ad {
+  background: url('../img/section-press-bg2.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.store {
+  background: url('../img/section-team-bg1.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* section-content End */
 
 /* seciton-contact */
 .section-contact {
