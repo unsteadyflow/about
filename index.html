@@ -339,71 +339,69 @@ description: 더 많은 사람들이 더 쉽게 자신만의 멋을 찾아갈 �
 <script src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js"></script>
 <script src="https://npmcdn.com/headroom.js@0.9.3/dist/jQuery.headroom.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4A89UfqdgNZmuQLc1kZpgX5RwcLXTdI"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlgFP4V2PxWln-AidFPD9DhwtdNDIkoE0"></script>
 <script src="js/default.js"></script>
 <script type="text/javascript">
-  $(document).ready(function () {
-    videoAppend();
-  });
+$(document).ready(function() {
+  videoAppend();
+});
 
-  // scroll 했을 때, iphone 애니메이션
-  $(window).scroll(function() {
-    var $nav = $('#nav');
-    var $sectionApp = $('#sectionApp');
-    var $iphoneImg = $('#iphoneImg');
-    var $iphoneShadow = $('#iphoneShadow');
-    /* sectionApp animation */
-    if( ($nav.offset().top)+200 > $sectionApp.offset().top){
-      $iphoneImg.css('top', -170);
-      $iphoneShadow.css('opacity', 1);
-    }
-    else {
-      $iphoneImg.css('top', -260);
-      $iphoneShadow.css('opacity', 0);
-    }
-  });
+// scroll 했을 때, iphone 애니메이션
+$(window).scroll(function() {
+  var $nav = $("#nav");
+  var $sectionApp = $("#sectionApp");
+  var $iphoneImg = $("#iphoneImg");
+  var $iphoneShadow = $("#iphoneShadow");
+  /* sectionApp animation */
+  if ($nav.offset().top + 200 > $sectionApp.offset().top) {
+    $iphoneImg.css("top", -170);
+    $iphoneShadow.css("opacity", 1);
+  } else {
+    $iphoneImg.css("top", -260);
+    $iphoneShadow.css("opacity", 0);
+  }
+});
 
+$("#hiringContainer").owlCarousel({
+  loop: true,
+  autoWidth: true,
+  center: true,
+  margin: 15
+});
 
-  $('#hiringContainer').owlCarousel({
-    loop: true,
-    autoWidth: true,
-    center: true,
-    margin: 15
-  });
+$("#pressContainer").owlCarousel({
+  loop: true,
+  autoWidth: true,
+  center: true,
+  margin: 15
+});
 
-  $('#pressContainer').owlCarousel({
-    loop: true,
-    autoWidth: true,
-    center: true,
-    margin: 15
-  });
-
-  // mobile에서는 video 자체를 안불러오게 함
-  function videoAppend() {
-    var $video = $('#video');
-    var videoTag = "<video id='video' class='section-intro-video' autoplay='autoplay' loop='loop'><source src='mov/intro.webm' type='video/webm'></video>";
-    var winWidth = $(window).width();
-    if(winWidth >= 850){
-      $video.append(videoTag);
-    }
-  };
-
+// mobile에서는 video 자체를 안불러오게 함
+function videoAppend() {
+  var $video = $("#video");
+  var videoTag =
+    "<video id='video' class='section-intro-video' autoplay='autoplay' loop='loop'><source src='mov/intro.webm' type='video/webm'></video>";
+  var winWidth = $(window).width();
+  if (winWidth >= 850) {
+    $video.append(videoTag);
+  }
+}
 </script>
 <!--[if lte IE 9]>
 <script type="text/javascript">
-  $(document).ready(function() {
-    iphoneFix();
-  });
-  $(window).scroll(function() {
-    iphoneFix();
-  });
+$(document).ready(function() {
+  iphoneFix();
+});
+$(window).scroll(function() {
+  iphoneFix();
+});
 
-  // 아이콘 위치 고정
-  function iphoneFix() {
-    var $iphoneImg = $('#iphoneImg');
-    var $iphoneShadow = $('#iphoneShadow');
-    $iphoneImg.css('top', -170);
-    $iphoneShadow.css('opacity', 1);
-  }
+// 아이콘 위치 고정
+function iphoneFix() {
+  var $iphoneImg = $("#iphoneImg");
+  var $iphoneShadow = $("#iphoneShadow");
+  $iphoneImg.css("top", -170);
+  $iphoneShadow.css("opacity", 1);
+}
 </script>
 <![endif]-->
