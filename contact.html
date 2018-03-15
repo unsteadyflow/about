@@ -97,30 +97,30 @@ description: StyleShare 멤버들은 언제나 여러분의 목소리를 기다�
 <div id="Map" class="contact-map-wrapper col col-12"></div>
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4A89UfqdgNZmuQLc1kZpgX5RwcLXTdI"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlgFP4V2PxWln-AidFPD9DhwtdNDIkoE0"></script>
 <script src="js/default.js"></script>
 <script src="https://npmcdn.com/headroom.js@0.9.3/dist/headroom.min.js"></script>
 <script src="https://npmcdn.com/headroom.js@0.9.3/dist/jQuery.headroom.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function () {
-    headroom();
-    autoPlay();
+$(document).ready(function() {
+  headroom();
+  autoPlay();
+});
+function headroom() {
+  var winWidth = $(window).width();
+  var $nav = $("#nav");
+  if (winWidth <= 850) {
+    $nav.headroom();
+  }
+}
+function autoPlay() {
+  var video = document.querySelector("video");
+  // use the whole window and a *named function*
+  window.addEventListener("touchstart", function videoStart() {
+    video.play();
+    console.log("first touch");
+    // remove from the window and call the function we are removing
+    this.removeEventListener("touchstart", videoStart);
   });
-    function headroom() {
-    var winWidth = $(window).width();
-    var $nav = $('#nav');
-    if (winWidth <= 850) {
-      $nav.headroom();
-    }
-  };
-    function autoPlay() {
-      var video = document.querySelector('video');
-      // use the whole window and a *named function*
-      window.addEventListener('touchstart', function videoStart() {
-        video.play();
-        console.log('first touch');
-        // remove from the window and call the function we are removing
-        this.removeEventListener('touchstart', videoStart);
-      });
-    }
+}
 </script>
